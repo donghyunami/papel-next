@@ -4,7 +4,7 @@
 <br>     
 
 ```bash
- git clone github.com/donghyunami/papel-next
+ git clone https://github.com/donghyunami/papel-next
 ```
 
 <br><br>
