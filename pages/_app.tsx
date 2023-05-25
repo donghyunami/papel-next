@@ -1,10 +1,9 @@
-import Header from "@/componets/Header";
+import Head from "next/head";
+import { AppProps } from "next/app";
 import { theme } from "@/libs/theme";
 import { ThemeProvider } from "@emotion/react";
-import { AppProps } from "next/app";
-import Head from "next/head";
-
-import CssBaseline from "@mui/material/CssBaseline";
+import GlobalStyles from '@mui/material/GlobalStyles';
+import { reset } from "styles/reset";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
@@ -13,6 +12,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta charSet="utf-8" />
         <title>Papel</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -23,7 +23,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         />
       </Head>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
+        <GlobalStyles styles={reset} />
         <Component {...pageProps} />
       </ThemeProvider>
     </>

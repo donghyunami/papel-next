@@ -1,19 +1,18 @@
-import Link from "next/link";
 import React from "react";
-import PropTypes from "prop-types";
 import Header from "@/componets/Header";
+import { Box } from "@mui/material";
 
-const AppLayout = ({ children }) => {
+interface IProps {
+  children: React.ReactElement | string;
+}
+
+const AppLayout = ({ children }: IProps) => {
   return (
-    <main>
+    <>
       <Header />
-      {children}
-    </main>
+      <Box component='main' sx={{ padding: "5px 15px" }}>{children}</Box>
+    </>
   );
-};
-
-AppLayout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default AppLayout;
